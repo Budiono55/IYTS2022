@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar</title>
+</head>
+<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IYTS 2022</title>
+
+        <script src="https://kit.fontawesome.com/d82fd11cc8.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="index.css">
+	    <link rel="icon" type="image/x-icon" href="../img/LOGO/iconIYTS.ico">
+        <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    </head>
+    <body>
+        <div class="burger-menu-overlay"></div>
+        <section id="burger-menu-modal">
+            <div class="burger-menu-wrap">
+                <a>
+                    <i class="far fa-arrow-alt-circle-left" onClick="closeMenu()"></i>
+                </a>
+                <div class="col-12">
+                    <ul class="burger-menu-container">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Merchandise</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Speaker</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Timeline</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">IYTS 2022</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../faq/index.html">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <header>
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="brand-container col-6 col-lg-7">
+                    <a class="navbar-brand" href="../index.html"><img src="../img\LOGO\white landscape iyts_cropped.png" alt=""></a>
+                </div>
+                <div class="col-6 col-lg-5">
+                    <ul class="menu-container">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Merchandise</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Informasi
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="#">Speaker</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Timeline</a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">IYTS 2022</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../faq/index.html">FAQ</a>
+                        </li>
+                    </ul>
+                    <a class="menu-burger" onClick="openMenu()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- daftar -->
+            <section id="form-daftar">
+                <!-- <div class="unknown">
+                    <img src="../Group 12.png">
+                </div> -->
+               <div class="daftar">
+                    <h1>DAFTAR</h1>
+                    <div class="row justify-content-center">
+                        <div class="daftar-prim col-5">
+                            <input class="fname" type="text" name="name" placeholder="Nama Lengkap">
+                            <input type="text" name="Email" placeholder="Email">
+                            <input type="text" name="name" placeholder="Nomor HP">
+                            <input type="text" name="name" placeholder="Usia">
+                            <input type="text" name="name" placeholder="Instansi">
+                            <input type="text" name="name" placeholder="Instagram">                   
+                        </div>
+                        <div class="daftar-prim col-7">
+                            <textarea class="essai" name="Alasan" rows="3" cols="50" placeholder="Alasan Mengikuti IYTS"></textarea>
+                            <textarea class="essai" name="Pengalaman" rows="3" cols="50" placeholder="Pengalaman Organisasi"></textarea>
+                            <div class="row upload-wrap">
+                                <div class="upload col-6">
+                                    <label for="img">Bukti follow @IYTS:</label>
+                                    <input type="file" id="img" name="img" accept="image/*">
+                                </div>
+                                <div class="upload col-6">
+                                    <label for="img">Bukti follow @apmi.id:</label>
+                                    <input type="file" id="img" name="img" accept="image/*">
+                                </div>
+                            </div>
+                            <div class="row upload-wrap">
+                                <div class="upload col-6">
+                                    <label for="img">Bukti follow @fiksioner.id:</label>
+                                    <input type="file" id="img" name="img" accept="image/*">
+                                </div>
+                                <div class="upload col-6">
+                                    <label for="img">Bukti follow @alunanfls2n:</label>
+                                    <input type="file" id="img" name="img" accept="image/*">
+                                </div>
+                            </div>
+                            <div class="row upload-wrap">
+                                <div class="upload col-6">
+                                    <label for="img">Bukti SS Group:</label>
+                                    <input type="file" id="img" name="img" multiple accept="image/*">
+                                </div>
+                                <div class="upload col-6">
+                                    <label for="img">Bukti SS Twibbon:</label>
+                                    <input type="file" id="img" name="img" accept="image/*">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    
+                    <button type="submit" onclick="">Submit</button>
+                    
+                </div>
+            </section>
+</body>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../index.js"></script>
+</html>
