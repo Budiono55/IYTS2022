@@ -366,6 +366,7 @@ section{
     border-radius: 8px;
     width: 100%;
     font-size: 0.75vw;
+    resize: none;
 }
 
 .upload > label{
