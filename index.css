@@ -49,12 +49,21 @@
   
 html{
     scroll-behavior: smooth;
+    scrollbar-width: none; /* firefox */
 }
 
 body{
-    overflow-x: hidden;
+    overflow-x: hidden; 
+    
+    -ms-overflow-style: none; /*IE */
     /* For hidden feature */
     --nav-height: 15vh;
+    background-color: #231F20 ;
+}
+
+/* webkit */
+body::-webkit-scrollbar{
+    display:none;
 }
 
 .navbar{
@@ -380,21 +389,22 @@ section{
 }
 
 #footer{
-    height: 100vh;
-    margin-top: -5vh;
+    height: 50vh;
+    margin-top: -10vh;
     background-color: #f2f2f2; 
-    border-radius: 50px 50px 0 0;
+    border-radius: 25px 25px 0 0;
     background-image: url(./img/dudel.svg);
     background-clip: border-box;
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: exclusion;
+    overflow: hidden;
 }
 
 .dudel-foot{
     position: absolute;
-    height: 100%;
+    height: 50%;
     display: flex;
     /* justify-content:flex-end; */
     align-items: flex-end;
@@ -407,7 +417,7 @@ section{
 .logo{
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: 50vh;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -415,23 +425,34 @@ section{
 
     font-family: 'Roboto';
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 .l-oleh{
-    margin-top: 15px;
+    margin-top: 30px;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
 .l-oleh > img{
-    width: 50%;
+    width: 40%;
+}
+
+.l-sponsor{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #timeline{
     height: 100vh;
-    background-color: #f2f2f2; 
+    background-color: #f2f2f2;
+    margin-bottom: 0vh;
+    border-radius: 0 0 25px 25px; 
     background-image: url(./img/dudel.svg);
     background-clip: border-box;
     background-origin: border-box;
@@ -806,7 +827,7 @@ section{
 /* FORM TEMPLATE */
 
 #form-daftar{
-    height: 100vh;
+    height: 50vh;
     background-color: #231F20; 
     background-image: url(./img/dudel-invert.svg);
     background-clip: border-box;
@@ -819,18 +840,24 @@ section{
 .daftar{
     display: flex;
     align-items: center;
-    /* justify-content: center; */
-    flex-direction: column;
+    /* justify-content: flex-end; */
+    flex-direction: row;
     /* height: 35%; */
     width: 100vw;
+    height: 35vh;
 }
 
-.daftar > h1{
+.daftar-title{
+    display: flex;
+    justify-content: center; 
+}
+
+.daftar-title > h1{
     font-family: 'Fredoka One';
     font-weight: bold;
-    font-size: 4.5em;
+    font-size: 8em;
     color: #f2f2f2;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
     margin-top: 2%;
 }
 
@@ -839,7 +866,7 @@ section{
     /* --bs-gutter-x:23rem */
 }
 
-.daftar-prim{
+/* .daftar-prim{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -883,14 +910,19 @@ input {
     border-radius: 8px;
     border-bottom: 3px solid #eee;
     width: 100%;
+} */
+
+.daftar-bttn{
+    display: flex;
+    justify-content: center;
 }
 
-.daftar > button {
+.daftar-bttn > button {
     cursor: pointer;
     outline: none;
     /* padding: 10px 5px; */
-    margin-top: 20px;
-    border-radius: 30px; 
+    /* margin-top: 10px; */
+    border-radius: 10px; 
     border-color:#f2f2f2;
     background: transparent; 
     text-decoration: none;
@@ -899,9 +931,10 @@ input {
     font-family: "Roboto";
     color: #f2f2f2;
     width: 20vw;
+    height: 30vh;
     }
 
-.daftar > button:hover {
+.daftar-bttn > button:hover {
     color: white;
     background: #00aeef;
     border-color: white;
