@@ -307,91 +307,102 @@ section{
     /* margin-top: 15px; */
 }
 
+/* // ------------ SPEAKER ----------------------------- */
+
 #speaker{
     height: 100vh;
-    background-color: #231F20;
-    
+    background-color: #231F20; 
+    background-image: url(./img/dudel-invert.svg);
+    background-clip: border-box;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* padding-bottom: -15px; */
+    /* background-blend-mode: exclusion; */
 }
 
-.sp-banner {
-    height: 50vh;
-    width: 100vw;
+#speaker > div{
+    --bs-gutter-x: 0;
+}
+
+.sp-title-container {
+    height: 35%;
+    /* max-width: initial;
     border-radius: 0 0 50px 50px;
-    background-image: url("./img/speaker-banner.jpg");
+    background-image: url(./img/speaker-banner.jpg);
     background-repeat: no-repeat;
     background-clip: border-box;
     background-size: cover;
-    
+    --bs-gutter-x: 0 !important; */
 }
 
 .sp-title-wrap{
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;    
+    justify-content: flex-start;    
 }
 
 .sp-title-wrap > span{
     width: auto;
-    margin-right: 5%;
-    margin-top: -3%;
-
+    margin-left: 5vw;
     font-family: "Fredoka One";
     font-size: 5.5vw;
     color: #f2f2f2;
 }
 
-.sp-person{
-    position: relative;
-    top: -7vh;
-    padding-right: 30px;
-    padding-left: 30px;
+.sp-motto{
     display: flex;
-    justify-content: space-around;
-    
+    align-items: center;
+    justify-content: flex-start;    
 }
 
-.sp-person > .col-3{
-    min-height: 45vh;
-    max-height: 55vh;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    padding-left: 2%;
-    padding-right: 2%;
+.sp-motto > span{
+    width: auto;
+    font-family: "Roboto";
+    font-size: 1.8vw;
+    font-weight: 200;
+    color: #f2f2f2;
+    letter-spacing: 0.215em;
 }
 
-.sp-info-wrap{
-    position: relative;
-    top: -11vh;
+.sp-people-container{
+    height: 65%;
+    margin-top: -1vw;
 }
 
-.sp-photo{
-    width: 9vw;
-    height: 9vw;
-    border-radius: 50%;
-    background-color: #f2f2f2;
-    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.1);
+.people-wrap-circle{
+    display: none;
 }
 
-.sp-detail > h2{
-    padding-top: 15px;
-    font-family:"Bahnschrift";
-    font-weight: bold;
-    font-size: 2vw;
+.people-wrap{
+   height: 100%;
+   justify-content: space-between;
+   align-items: center;
+   /* margin-top: -3%; */
+   margin-left: 5vw;
+   width: 90vw;
+   padding: 0;
 }
 
-.sp-detail > h3{
-    padding-top: 15px;
-    font-family:"Roboto";
-    font-weight:300;
-    font-size: 1vw;
-    text-align: justify;
+.person{
+    width: 20vw;
+    height: 100%;
+    padding: 0;
 }
+
+.person > img{
+    width: 100%;
+    max-height: 100%;
+    border-radius: 1em;
+}
+
+
 
 #footer{
     height: 50vh;
     margin-top: -10vh;
-    background-color: #f2f2f2; 
+    background-color: #f2f2f2 !important; 
     border-radius: 25px 25px 0 0;
     background-image: url(./img/dudel.svg);
     background-clip: border-box;
@@ -415,14 +426,6 @@ section{
 }
 
 .logo{
-    display: flex;
-    flex-direction: row;
-    height: 50vh;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: -10vh;
-
     font-family: 'Roboto';
     font-weight: bold;
     font-size: 1.25em;
@@ -436,8 +439,15 @@ section{
     flex-direction: column;
 }
 
-.l-oleh > img{
-    width: 40%;
+.l-oleh-wrap{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.l-oleh-wrap > img{
+    width: 20%;
 }
 
 .l-sponsor{
@@ -446,6 +456,17 @@ section{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.l-sponsor-wrap{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.l-sponsor-wrap > img{
+    width: 20%;
 }
 
 #timeline{
@@ -614,8 +635,16 @@ section{
 /* adjust font-size, mostly*/
 
 /* extra extra large */
-@media (max-width: 1339px){
-
+@media (max-width: 1399px){
+    .sp-title-wrap > span{
+        font-size: 7vw;
+    }
+    .sp-motto > span{
+        font-size: 2.2vw;
+    }
+    .sp-people-container{
+        margin-top: 0;
+    }
 }
 
 /* extra large */
@@ -734,6 +763,59 @@ section{
         height: 100%;
     }
 
+
+    .sp-title-wrap > span{
+        width: auto;
+        margin-left: 5vw;
+        font-family: "Fredoka One";
+        font-size: 7vw;
+        color: #f2f2f2;
+    }
+    .sp-motto > span{
+        width: auto;
+        font-family: "Roboto";
+        font-size: 2.5vw;
+        font-weight: 200;
+        color: #f2f2f2;
+        letter-spacing: 0.215em;
+        margin-left: 6vw;
+    }
+
+    .people-wrap{
+        display: none;
+    }
+
+    .people-wrap-circle{
+        height: max-content;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 2%;
+        padding: 0;
+    }
+
+    .person-circle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+    }
+    .person-circle > img{
+        width: 20vw;
+        height: 20vw;
+        border-radius: 100px;
+        object-fit: cover; 
+        object-position: 100% 0;
+    }
+
+    .person-circle > span{
+        color: #f2f2f2;
+        font-family: "Roboto";
+        font-size: 0.75em;
+    }
+
 }
 
 /* medium */
@@ -749,8 +831,6 @@ section{
     .nav-link{
         font-weight: normal;
     }
-
-    
 }
 
 /* small */
@@ -840,30 +920,29 @@ section{
 .daftar{
     display: flex;
     align-items: center;
-    /* justify-content: flex-end; */
+    justify-content: center;
     flex-direction: row;
     /* height: 35%; */
     width: 100vw;
-    height: 35vh;
+    height: 80%;
 }
 
 .daftar-title{
     display: flex;
     justify-content: center; 
+    align-content: center;
 }
 
 .daftar-title > h1{
     font-family: 'Fredoka One';
     font-weight: bold;
-    font-size: 8em;
+    font-size: 9vw;
+    letter-spacing: 2vw;
     color: #f2f2f2;
-    margin-bottom: 2%;
-    margin-top: 2%;
 }
 
 .row{
     max-width: 100%;
-    /* --bs-gutter-x:23rem */
 }
 
 /* .daftar-prim{
@@ -917,25 +996,24 @@ input {
     justify-content: center;
 }
 
-.daftar-bttn > button {
+/* .daftar-bttn > button {
     cursor: pointer;
     outline: none;
-    /* padding: 10px 5px; */
-    /* margin-top: 10px; */
+    padding: 10px 5px; */
+    /* margin-top: 10px;
     border-radius: 10px; 
     border-color:#f2f2f2;
     background: transparent; 
     text-decoration: none;
-    font-size: 1.5em;
-    font-weight: 600;
-    font-family: "Roboto";
+    width: 30vw; 
+    height: 37vh;
+
+    font-size: 2vw;
     color: #f2f2f2;
-    width: 20vw;
-    height: 30vh;
     }
 
 .daftar-bttn > button:hover {
     color: white;
     background: #00aeef;
     border-color: white;
-    }
+    } */

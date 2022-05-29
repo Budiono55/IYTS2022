@@ -5,12 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>IYTS 2022</title>
-
-        <script src="https://kit.fontawesome.com/d82fd11cc8.js" crossorigin="anonymous"></script>
+        
+        <!-- Font-awesome 4 -->
+        <!-- <script src="https://kit.fontawesome.com/d82fd11cc8.js" crossorigin="anonymous"></script> -->
+        
+        <!-- Font awesome 5 -->
+        <script src="https://kit.fontawesome.com/e68ae30a04.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="bootstrap.min.css">
         <link rel="stylesheet" href="index.css">
 	    <link rel="icon" type="image/x-icon" href="./img/LOGO/iconIYTS.ico">
         <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     
     </head>
     <body>
@@ -151,45 +157,61 @@
         </section>
 
         
-        <!-- narber -->
+        <!-- SPEAKER -->
         <section id="speaker">
-            <div class="sp-banner">
-                <div class="sp-title-wrap row">
-                    <span>SPEAKER KEYNOTE</span>
+            <div class="sp-title-container row">
+                <div class="sp-title-wrap col-xxl-4 col-5">
+                    <span>SPEAKER</span>
+                </div>
+                <div class="sp-motto col-xxl-8 col-7">
+                    <span>Disampaikan oleh speaker <br> terbaik Indonesia</span>
                 </div>
             </div>
-            <div class="sp-person row">
-                <div class="col-3">
-                    <div class="sp-info-wrap">
-                        <div class="sp-photo"></div>
-                        <div class="sp-detail">
-                            <h2>Dharmaji Suradika, S.T</h2>
-                            <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ex.</h3>
-                        </div>
+
+            <div class="sp-people-container row">
+                <!-- default -->
+                <div class="people-wrap row">
+                    <div class="person col-3">
+                        <img src="./img/jihan.jpg">
+                    </div>
+                    <div class="person col-3">
+                        <img src="./img/jihan.jpg">
+                    </div>
+                    <div class="person col-3">
+                        <img src="./img/jihan.jpg">
+                    </div>
+                    <div class="person col-3">
+                        <img src="./img/jihan.jpg">
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="sp-info-wrap">
-                        <div class="sp-photo"></div>
-                        <div class="sp-detail">
-                            <h2>WIRAWAN TAMVAN</h2>
-                            <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ex.</h3>
-                        </div>
+                
+                <!-- circle mode when width is small enough -->
+                <div class="people-wrap-circle">
+                    <div class="person-circle">
+                        <img src="./img/jihan.jpg">
+                        <span>DR. MANGUNKUSUMA</span>
+                        <span>CEO Bukalapak</span>
+                    </div>
+                    <div class="person-circle">
+                        <img src="./img/jihan.jpg">
+                        <span>DR. MANGUNKUSUMA</span>
+                        <span>CEO Bukalapak</span>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="sp-info-wrap">
-                        <div class="sp-photo"></div>
-                        <div class="sp-detail">
-                            <h2>WIRAWAN TAMVAN</h2>
-                            <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ex.</h3>
-                        </div>
+                <div class="people-wrap-circle">
+                    <div class="person-circle">
+                        <img src="./img/jihan.jpg">
+                        <span>DR. MANGUNKUSUMA</span>
+                        <span>CEO Bukalapak</span>
+                    </div>
+                    <div class="person-circle">
+                        <img src="./img/jihan.jpg">
+                        <span>DR. MANGUNKUSUMA</span>
+                        <span>CEO Bukalapak</span>
                     </div>
                 </div>
             </div>
         </section>
-
-
 
         <section id="timeline">
             <div class="timeline-wrap">
@@ -299,12 +321,12 @@
                 <img src="../img/Group 12.png">
             </div> -->
            <div class="daftar">  
-                <div class="daftar-title col-9">
+                <div class="daftar-title">
                     <h1>DAFTAR</h1>
                 </div>
-                <div class="daftar-bttn col-3">
-                    <button onclick="window.location.href='./daftar/index.html'">Submit</button>  
-                </div>
+                <!-- <div class="daftar-bttn col-4">
+                    <button onclick="window.location.href='./daftar/index.html'"><i class="fa-solid fa-angle-double-right fa-9x"></i></button>  
+                </div> -->
             </div>
         </section>
 
@@ -314,13 +336,27 @@
                 <img src="img\dudel-bawahan.svg">
             </div>
             <div class="logo">
-                <div class="l-oleh col-6">
-                    <span>Dipersembahkan oleh:</span>
-                    <img src="img\LOGO\Logo Baru IYTS.png">
+                <div class="row">
+                    <div class="l-oleh col-6">
+                        <span>Dipersembahkan oleh:</span>
+                        <div class="l-oleh-wrap">
+                            <img src="img\Sponsor\nike.png">
+                            <img src="img\Sponsor\nike.png">
+                            <img src="img\Sponsor\nike.png">
+                            <img src="img\Sponsor\nike.png">
+                        </div>
+                    </div>
+                    <div class="l-sponsor col-6">
+                        <span>Didukung oleh:</span>
+                        <div class="l-sponsor-wrap">
+                            <img src="img\Sponsor\nike.png">
+                            <img src="img\Sponsor\nike.png">
+                            <img src="img\Sponsor\nike.png">
+                            <img src="img\Sponsor\nike.png">
+                        </div>
+                    </div>
                 </div>
-                <div class="l-sponsor col-6">
-                    <span>Didukung oleh:</span>
-                </div>
+                
             </div>
         </section>
     </body>

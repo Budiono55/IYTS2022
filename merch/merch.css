@@ -57,7 +57,7 @@ body{
     -ms-overflow-style: none; /*IE */
     /* For hidden feature */
     --nav-height: 15vh;
-    background-color: #231F20 ;
+    background-color: #f2f2f2 ;
 }
 
 /* webkit */
@@ -138,7 +138,6 @@ body::-webkit-scrollbar{
 }
 
 header{
-    height: 110vh;
     background-image: url("./img/Confrence 1.png");
     background-clip: border-box;
     background-origin: border-box;
@@ -151,6 +150,60 @@ header{
 section{
     overflow-x: hidden;
 }
+
+
+/* MERCHENDES */
+
+#merch{
+    background-color: #f2f2f2; 
+    margin-bottom: 5vh;
+}
+
+.merch-title-wrap{ 
+    display: flex;
+    justify-content: center;
+    align-item: center;
+    margin-top: 1%;
+
+}
+
+.merch-title-wrap > span{
+    font-family: "Fredoka One";
+    font-size: 3em;
+}
+
+.merch-list{
+    height: max-content;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    padding: 0;
+}
+
+.barang{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barang > img{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 100px;
+    object-fit: cover; 
+    object-position: 100% 0;
+}
+
+.barang > span{
+    color: #231F20;
+    font-family: "Roboto";
+    font-size: 0.75em;
+}
+
+
+
 
 
 /* adjustment for screens width */
@@ -358,112 +411,3 @@ section{
 }
 
 
-/* FORM TEMPLATE */
-
-#form-daftar{
-    height: 100vh;
-    background-color: #231F20; 
-    background-image: url("../img/dudel-invert.svg");
-    background-clip: border-box;
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: exclusion;
-}
-
-.daftar{
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    flex-direction: column;
-    /* height: 35%; */
-    width: 100vw;
-}
-
-.daftar > h1{
-    font-family: 'Fredoka One';
-    font-weight: bold;
-    font-size: 4.5em;
-    color: #f2f2f2;
-    margin-bottom: 3%;
-    margin-top: 2%;
-}
-
-.row{
-    max-width: 100%;
-    /* --bs-gutter-x:23rem */
-}
-
-.daftar-prim{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: space-between;
-}
-
-.daftar-prim > *{
-    max-width: 90%;
-}
-
-.essai{
-    border-radius: 8px;
-    width: 100%;
-    font-size: 0.75vw;
-    resize: none;
-}
-
-.upload > label{
-    color: #f2f2f2;
-    font-size: 0.9vw;
-}
-
-.upload > input{
-    font-size: 1vw;
-}
-
-.upload > input.checksize{
-    min-width: 1vw;
-    min-height: 1vw;
-}
-
-.upload-wrap{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-
-.upload-wrap > *{
-    max-width: 100%;
-}
-
-input {
-    padding: 10px;
-    margin-bottom: 4.5%;
-    background: white;
-    border: none;
-    border-radius: 8px;
-    border-bottom: 3px solid #eee;
-    width: 100%;
-}
-
-.daftar > button {
-    cursor: pointer;
-    outline: none;
-    /* padding: 10px 5px; */
-    margin-top: 20px;
-    border-radius: 30px; 
-    border-color:#f2f2f2;
-    background: transparent; 
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: 600;
-    font-family: "Roboto";
-    color: #f2f2f2;
-    width: 20vw;
-    }
-
-.daftar > button:hover {
-    color: white;
-    background: #00aeef;
-    border-color: white;
-    }
