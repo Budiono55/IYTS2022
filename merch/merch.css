@@ -45,8 +45,9 @@
          url('../fonts/roboto/roboto-v29-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/roboto/roboto-v29-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
   }
+
   
-  html{
+html{
     scroll-behavior: smooth;
     scrollbar-width: none; /* firefox */
 }
@@ -66,8 +67,8 @@ body::-webkit-scrollbar{
 }
 
 .navbar{
-    /* height: var(--nav-height); */
-
+    /* max-height: var(--nav-height); */
+    position: initial;
     border-radius: 0 0 20px 20px;
     z-index: 2;
     padding-left: 5%;
@@ -84,7 +85,7 @@ body::-webkit-scrollbar{
 
 .navbar-hidden {
     transform: translateY(calc(-1 * var(--nav-height)));
-  }
+}
 
 .nav-link{
     color: rgb(125, 125, 125);
@@ -100,33 +101,22 @@ body::-webkit-scrollbar{
 }
 
 .nav-item > button{
-    cursor: pointer;
-    outline: none;
-    margin-left: 10px;
-    margin-top: 4px;
-    border-radius: 10px; 
-    border-color:#f2f2f2;
-    background: transparent; 
-    text-decoration: none;
     font-size: 1.25em;
     font-weight: 550;
     font-family: "Roboto";
-    color: #f2f2f2;
-    
 }
-
-.nav-item> button:hover {
-    color: white;
-    background: #00aeef;
-    border-color: white;
-    }
 
 .menu-container{
     display: flex;
     flex-direction: row;
-    margin: 0;
     padding: 0;
+    margin: 0;
     justify-content: space-evenly;
+}
+
+.menu-container > .nav-item{
+    flex-grow: 0.2;
+    text-align: center;
 }
 
 .menu-burger{
@@ -138,13 +128,12 @@ body::-webkit-scrollbar{
 }
 
 header{
-    background-image: url("./img/Confrence 1.png");
+    /* background-image: url("./img/Confrence 1.png"); */
     background-clip: border-box;
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 -15%;
-    overflow: hidden;
+    background-position: 0;
 }
 
 section{
@@ -159,17 +148,22 @@ section{
     margin-bottom: 5vh;
 }
 
+.merch-container{
+    margin-top: 1%;
+    transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
+}
+
 .merch-title-wrap{ 
     display: flex;
     justify-content: center;
-    align-item: center;
-    margin-top: 1%;
-
+    align-items: center;
+    padding: 0 12px;
 }
 
 .merch-title-wrap > span{
     font-family: "Fredoka One";
     font-size: 3em;
+    text-align: center;
 }
 
 .merch-list{
@@ -179,30 +173,139 @@ section{
     justify-content: center;
     align-items: center;
     margin-top: 2%;
-    padding: 0;
+    padding: 0 12px;
 }
 
 .barang{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 12px 0;
 }
 
 .barang > img{
-    width: 20vw;
-    height: 20vw;
-    border-radius: 100px;
+    width: 60%;
+    border-radius: 15px;
     object-fit: cover; 
     object-position: 100% 0;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
 }
 
-.barang > span{
+.barang > .items-price{
     color: #231F20;
+    opacity: 0.7;
     font-family: "Roboto";
-    font-size: 0.75em;
+    font-size: 1em;
 }
 
+.barang > .items-title{
+    color: #231F20;
+    font-family: "Kanit";
+    font-size: 1.25em;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    padding-top: 12px;
+}
 
+/* Item details section */
+.detail-container{
+    opacity: 0;
+    transform: translateY(50%);
+    transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
+    margin: 5vh 0;
+    padding: 0 5vw;
+}
+
+.detail-back > a{
+    color: #231F20;
+    opacity: 0.7;
+    font-family: 'Kanit';
+    text-decoration: none;
+    font-size: 2em;
+    padding-left: .5rem;
+    transition: opacity .15s ease-in-out;
+}
+
+.detail-back > a > i{
+    padding-right: .75rem;
+}
+
+.detail-back > a:hover{
+    opacity: 1;
+}
+
+.detail-images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-images > img:nth-child(1){
+    padding-top: 0;
+}
+
+.detail-images > img{
+    width: 65%;
+    padding: 12px 0;
+}
+
+.detail-dtl{
+    display: flex;
+    justify-content: center;
+    height: inherit;
+}
+
+.detail-dtl-wrap{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: inherit;
+}
+
+.detail-dtl-wrap > .detail-title{
+    font-family: "Arial Black";
+    text-transform: uppercase;
+    color: #231F20;
+    font-size: 2.5em;
+    word-wrap: break-word;
+}
+
+.detail-dtl-wrap > .detail-price{
+    font-family: "Roboto";
+    color: #231F20;
+    opacity: 0.7;
+    font-size: 1.1em;
+    margin: 12px 0;
+}
+
+.detail-dtl-wrap > button{
+    padding: 12px 0;
+    margin: 12px 0;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+.detail-dtl-wrap > .detail-specs{
+    margin-top: 12px;
+    font-family: "Roboto"
+}
+
+.detail-specs > ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 6px 0;
+}
+
+.detail-specs > ul > li:before{
+    content: "\2014\a0";
+    /* text-indent: 5px; */
+}
+
+.detail-dtl-wrap > .detail-sizechart{
+    width: 100%;
+    margin-top: 12px;
+    align-self: center;
+}
 
 
 
@@ -211,7 +314,7 @@ section{
 /* adjust font-size, mostly*/
 
 /* extra extra large */
-@media (max-width: 1339px){
+@media (max-width: 1399px){
 
 }
 
@@ -227,47 +330,7 @@ section{
     }
 
     .navbar-brand > img{
-        width: 250px;
-    }
-    
-    .slogan-container > h1{
-        font-size: 8vw;
-    }
-
-    .about-wrap{
-        padding: 0;
-    }
-
-    .about-info, .keplak{
-        height: 100%;
-    }
-
-    .about-info > h3{
-        font-size: 1.9vw;
-        line-height: 1.5em;
-    }
-
-    .identitas-keplak > h3{
-        font-size: 2vw;
-    }
-
-    .identitas-keplak > h4{
-        font-size: 1.75vw;
-    }
-}
-
-/* medium */
-@media (max-width: 767px){
-    .navbar{
-        min-height: 90px;
-    }
-
-    .navbar-brand > img{
         width: 200px;
-    }
-
-    .nav-link{
-        font-weight: normal;
     }
 
     .menu-container{
@@ -276,7 +339,7 @@ section{
 
     .menu-burger{
         display: block;
-        font-size: 6vw;
+        font-size: 3vw;
         color: white;
         text-decoration: none;
         float: right;
@@ -345,20 +408,69 @@ section{
         justify-content: space-evenly;
         height: 100%;
     }
+
+    .merch-container{
+        margin-top: 5%;
+    }
+
+    .merch-title-wrap > span{
+        font-family: "Fredoka One";
+        font-size: 4em;
+        text-align: center;
+    }
+
+    .barang > .items-title{
+        font-size: 1.35em;
+    }
+
+    .barang > .items-price{
+        font-size: 1.1em;
+    }
+
+    .detail-back > a{
+        font-size: 1.5em;
+    }
+    
+    .detail-back > a > i{
+        padding-right: .5rem;
+    }
+
+    .detail-images > img{
+        width: 80%;
+    }
+
+    .detail-dtl-wrap > .detail-title{
+        font-size: 2em;
+    }
+
+    .detail-dtl-wrap > .detail-price{
+        font-size: 1em;
+    }
+}
+
+/* medium */
+@media (max-width: 767px){
+    .navbar{
+        min-height: 90px;
+    }
+
+    .navbar-brand > img{
+        width: 200px;
+    }
+
+    .nav-link{
+        font-weight: normal;
+    }
+
+    .merch-title-wrap > span{
+        font-family: "Fredoka One";
+        font-size: 3em;
+        text-align: center;
+    }
 }
 
 /* small */
 @media (max-width: 575px){
-    .carousel-control-next, .carousel-control-prev{
-        width: 25%;
-    }
-    .carousel-item{
-        transition: transform .4s ease-in-out;
-    }
-    .timeline-title, .nost-title > h1{
-        font-size: 8vw;
-    }
-
     .navbar{
         padding-right: 20px;
         padding-left: 20px;
@@ -372,12 +484,68 @@ section{
         font-size: 2.75vw;
     }
 
-    .slogan-container > h1{
-        font-size: 12vw;
+    .menu-burger{
+        font-size: 5vw;
     }
 
-    #about{
-        border-radius: 20px 20px 0 0;
+    .barang > .items-title{
+        font-size: 1.2em;
+    }
+
+    .barang > .items-price{
+        font-size: 0.95em;
+    }
+
+    .detail-back{
+        padding-right: 0 !important;
+    }
+
+    .detail-back > a{
+        padding: 0;
+        font-size: 1.25em;
+    }
+
+    .detail-back > a > i{
+        padding: 0;
+        padding-left: calc(var(--bs-gutter-x) * .2);
+    }
+
+    .detail-back > a > span{
+        display: none;
+    }
+
+    .detail-container > .row > div{
+        padding: 0 calc(var(--bs-gutter-x) * .2);
+    }
+
+    .detail-images > img{
+        padding: 6px 0;
+    }
+
+    .detail-dtl-wrap > .detail-title{
+        font-size: 1.25em;
+    }
+
+    .detail-dtl-wrap > .detail-price{
+        font-size: .75em;
+        font-weight: 300;
+        margin: 6px 0;
+    }
+
+    .detail-dtl-wrap > button{
+        font-size: .85em;
+        font-weight: 500;
+        padding: 6px 3px;
+        margin: 6px 0;
+    }
+
+    .detail-dtl-wrap > .detail-specs{
+        margin-top: 6px;
+        font-size: .675em;
+    }
+
+    .detail-dtl-wrap > .detail-sizechart{
+        margin-top: 6px;
     }
 }
 
@@ -387,27 +555,7 @@ section{
         --carousel-height: 80vw;
         --section-height: 100vw;
     }
-    
-    header{
-        height: 100vh;
-    }
-
-    #about, #nostalgia, #speaker, #timeline{
-        height: var(--section-height);
-    }
-
-    .dudel-pojokan{
-        display: none;
-    }
-
-    .nost-video > iframe {
-        min-width: 0;
-        min-height: 0;
-        max-height: none;
-        max-width: none;
-        width: 80vw;
-        height: 45vw;
-    }
 }
+
 
 

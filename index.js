@@ -60,7 +60,7 @@ window.onscroll = function(){
         }
         lastScrollY = window.scrollY;
     });
-    
+
     // if (window.pageYOffset > 180){
     //     navbar.classList.remove('bg-dark')
     //     navbar.classList.add('bg-transparent')
