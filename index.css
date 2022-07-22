@@ -253,7 +253,7 @@ section{
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 25px 25px 0 0;
+    border-radius: 25px;
     padding-bottom:-5%;
     /* background-blend-mode: exclusion; */
 
@@ -326,7 +326,7 @@ section{
 /* // ------------ SPEAKER ----------------------------- */
 
 #speaker{
-    height: 100vh;
+    height: 175vh;
     background-color: #f2f2f2; 
     background-image: url(./img/dudel.svg);
     background-clip: border-box;
@@ -342,7 +342,7 @@ section{
 }
 
 .sp-title-container {
-    height: 35%;
+    height: 20%;
     /* max-width: initial;
     border-radius: 0 0 50px 50px;
     background-image: url(./img/speaker-banner.jpg);
@@ -383,7 +383,7 @@ section{
 }
 
 .sp-people-container{
-    height: 65%;
+    height: 80%;
     margin-top: -1vw;
 }
 
@@ -393,8 +393,8 @@ section{
 
 .people-wrap{
    height: 100%;
-   justify-content: space-between;
-   align-items: center;
+   /* justify-content: space-between; */
+   /* align-items: center; */
    /* margin-top: -3%; */
    margin-left: 5vw;
    width: 90vw;
@@ -410,10 +410,20 @@ section{
 .person > img{
     width: 100%;
     max-height: 100%;
-    border-radius: 1em;
+    /* border-radius: 1em; */
 }
 
+.p-first-row{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
 
+.p-sec-row{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-evenly;
+}
 
 #footer{
     height: 60vh;
@@ -536,6 +546,7 @@ section{
     min-width: 10%;
     max-width: 17%;
     height: min-content;
+    padding-left: 10px;
 }
 
 .l-sponsor{
@@ -576,7 +587,7 @@ section{
     background-color: #0A6ACF;
     background-image: url(./img/dudel.svg);
     margin-bottom: 0vh;
-    border-radius: 0 0 25px 25px; 
+    border-radius: 25px; 
     background-clip: border-box;
     background-origin: border-box;
     background-repeat: no-repeat;
@@ -760,7 +771,7 @@ section{
 
 }
 
-#form-daftar2{
+#form-daftar-mobile{
     display: none;
 }
 
@@ -1084,6 +1095,14 @@ hr {
 
     }
 
+    #speaker{
+        height: 175vh !important;
+    }
+
+    .sp-title-container{
+        height: 12%;
+    }
+
     .people-wrap{
         display: none;
     }
@@ -1101,14 +1120,13 @@ hr {
     .person-circle{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        
-        
+        align-items: center; 
     }
+
     .person-circle > img{
         width: 20vw;
-        height: 20vw;
-        border-radius: 100px;
+        height: 23vw;
+        /* border-radius: 100px; */
         object-fit: cover; 
         object-position: 100% 0;
     }
@@ -1116,15 +1134,16 @@ hr {
     .person-circle > span{
         color: #231F20;
         font-family: "Roboto";
-        font-size: 0.75em;
+        font-size: 1.2em;
         font-weight: bold;
     }
 
     .person-circle > h2{
         color: #231F20;
         font-family: "Roboto";
-        font-size: 0.75em;
+        font-size: 0.9em;
         font-weight: 400;
+        text-align: center;
     }
     .dudel-corner{
         display: none;
@@ -1207,7 +1226,7 @@ hr {
         display: none;
     }
 
-    #form-daftar2{
+    #form-daftar-mobile{
         display: block;
         height: 50vh;
         background-color: #f2f2f2; 
@@ -1256,7 +1275,7 @@ hr {
         justify-content: center;
         align-items: center;
         
-        border-right: solid;
+        border-right: none;
     }
     
     .merch-parent > h1{
@@ -1480,6 +1499,26 @@ hr {
 
     .l-oleh-container, .l-oleh-sponsor{
         margin-top: 0;
+    }
+}
+
+@media (max-width:420px){
+    .card-desc > * {
+        font-size: 0.5em;
+        font-family: "Roboto";
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .card-learn > a{
+        font-size: 0.5em;
+        font-family: "Roboto";
+        font-weight: lighter;
+        text-decoration: none;
+        color: black;
+        position: relative;
+        z-index: 1;
+        transition: color .15s ease-in-out;
     }
 }
 

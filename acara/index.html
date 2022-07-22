@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="cache-control" content="no-cache">
-    <title>Merchandise</title>
+    <title>Presensi & Evaluasi</title>
 </head>
 <body>
 
@@ -17,8 +16,8 @@
 
         <script src="https://kit.fontawesome.com/d82fd11cc8.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="merch.css?v=1.0">
-	    <link rel="icon" type="image/x-icon" href="../img/LOGO/iconIYTS.ico">
+        <link rel="stylesheet" href="acara.css?v=1.0">
+	    <link rel="icon" type="image/x-icon" href="icon_IYTS.ico">
         <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
     </head>
@@ -35,32 +34,32 @@
                             <a class="nav-link active" aria-current="page" href="../#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href=".">Merchandise</a>
+                            <a class="nav-link active" aria-current="page" href="../merch/">Merchandise</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="../#speaker">Speaker</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../more">Timeline</a>
+                            <a class="nav-link active" aria-current="page" href="../#timeline">Timeline</a>
                         </li>
                         <!-- <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../maintenance.html/">IYTS 2022</a>
+                            <a class="nav-link active" aria-current="page" href="../maintenance.html">IYTS 2022</a>
                         </li> -->
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="../faq/">FAQ</a>
-                        </li>
+                        </li> -->
                         <li><hr class="dropdown-divider"></li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../#form-daftar2">DAFTAR</a>
+                            <a class="nav-link active" aria-current="page" href="../#form-daftar">DAFTAR</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
         <header>
-            <nav class="navbar navbar-dark bg-dark fixed-top ">
+            <nav class="navbar navbar-dark bg-dark">
                 <div class="brand-container col-6 col-lg-7">
-                    <a class="navbar-brand" href=".."><img src="../img\LOGO\white landscape iyts_cropped.png" alt=""></a>
+                    <a class="navbar-brand" href="../"><img src="..\img\LOGO\white landscape iyts_cropped.png" alt=""></a>
                 </div>
                 <div class="col-6 col-lg-5">
                     <ul class="menu-container">
@@ -68,7 +67,7 @@
                             <a class="nav-link active" aria-current="page" href="../#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href=".">Merchandise</a>
+                            <a class="nav-link active" aria-current="page" href="../merch/">Merchandise</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a
@@ -85,7 +84,7 @@
                                     <a class="dropdown-item" href="../#speaker">Speaker</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../more">Timeline</a>
+                                    <a class="dropdown-item" href="../#timeline">Timeline</a>
                                 </li>
                                 <!-- <li><hr class="dropdown-divider"></li> -->
                                 <!-- <li>
@@ -105,21 +104,44 @@
                     </a>
                 </div>
             </nav>
-            </header>
-            
-            <section id="merch">
-                <div class="merch-container">
-                    <div class="merch-title-wrap">
-                        <span>ALL PRODUCTS</span>
-                    </div>
-                    <div class="merch-list row">
+
+            <!-- daftar -->
+            <section id="form-daftar">
+                <!-- <div class="unknown">
+                    <img src="../img/Group 12.png">
+                </div> -->
+                <div class="form-container">
+                    <div class="presensi-parent col-6">
+                        <h1>Presensi</h1>
+                        <button class="btn btn-danger" onclick="window.open('https://forms.gle/BrP2dsc6RnE7kDAq6', '_blank')">Enter Presence Form</button>
+                    </div>  
+                    <div class="eval-title col-6">
+                        <h1>Evaluasi</h1>
+                        <button class="btn btn-primary" onclick="window.open('./evaluasi', '_blank')">Enter Evaluation Form</button>
                     </div>
                 </div>
             </section>
-            
+    
+            <section id="form-daftar-mobile">
+                <!-- <div class="unknown">
+                    <img src="../img/Group 12.png">
+                </div> -->
+                <div class="form-container row">
+                    <div class="presensi-parent">
+                        <h1>Presensi</h1>
+                        <button class="btn btn-danger" onclick="window.open('https://forms.gle/BrP2dsc6RnE7kDAq6', '_blank')">Enter Presence Form</button>
+                    </div> 
+                    <div class="line">
+                        <hr>
+                    </div> 
+                    <div class="eval-title">
+                        <h1>Evaluasi</h1>
+                        <button class="btn btn-primary" onclick="window.open('./evaluasi', '_blank')">Enter Evaluation Form</button>
+                    </div>
+                </div>
+            </section>
+
 </body>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../index.js"></script>
-<script src="cards_merch.js"></script>
-<script src="merch_generator.js"></script>
 </html>
